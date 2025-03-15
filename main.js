@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-let sqNum = 16;
+let initialSqNum = 16;
 function createGrid(rowNum, colNum) {
     container.innerHTML = '';
     let sqSize = Math.floor(Math.min(container.clientWidth, container.clientHeight) )/ rowNum;
@@ -51,4 +51,4 @@ function changeGrid() {
     }
 }
 
-createGrid(sqNum,sqNum);
+createGrid(initialSqNum,initialSqNum);
