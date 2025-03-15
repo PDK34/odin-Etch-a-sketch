@@ -1,7 +1,8 @@
 const container = document.querySelector('.container');
 
 let initialSqNum = 16;
-let isDraw = false;
+let isDrawing = false;
+let isClick = true;
 
 function createGrid(rowNum, colNum) {
     container.innerHTML = '';
@@ -28,29 +29,43 @@ function createGrid(rowNum, colNum) {
     }
 }
 container.addEventListener('click', (e) => {
-    let square = e.target;
-    if (square !== container&& !isDraw) {
-        square.classList.toggle('color');
-    }
+        let square = e.target;
+        if (square !== container) {
+            square.classList.toggle('color');
+       
+}
 });
 container.addEventListener('mousedown', (e) => {
     let square = e.target;
-    isDraw = true;
+    isDrawing = true;
     isClick = true;
     if (square !== container) {
         square.classList.add('color');
     }
 });
 container.addEventListener('mousemove', (e) => {
+if (isDrawing) {
     let square = e.target;
-    isClick = false; 
-    if (square !== container&&isDraw) {
-        square.classList.add('color');
-    }
+        isClick = false;
+        if (square !== container) {
+            square.classList.add('color');
+        }
+}
 });
 container.addEventListener('mouseup', (e) => {
-    let square = e.target;
-    isDraw = false;
+    isDrawing = false;
+    if(isClick) {
+        const square = e.target;
+        if (square !== container) {
+            square.classList.toggle('color');
+        }
+
+    }
+});
+
+container.addEventListener('mouseleave', (e) => {
+    isDrawing = false;
+    isClick = false;
 
 
 });
