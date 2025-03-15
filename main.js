@@ -13,6 +13,10 @@ for(let i =0;i<rowNum;i++){
             div.style.height = '16px';
             div.style.border = '1px solid black';
             container.appendChild(div);
+
+            div.addEventListener('mouseenter', () => {
+                div.style.backgroundColor = 'grey';
+            });
         
     }
 }
@@ -25,3 +29,22 @@ container.addEventListener('click' ,(e) => {
    }
 
 })
+
+
+container.addEventListener('mouseenter' ,(e) => {
+    let square = e.target;
+   if (square!==container) {
+     square.style.backgroundColor = 'grey';
+   }
+
+})
+
+function clearGrid(){
+    Array.from(container.children).forEach((child) => {
+        child.style.backgroundColor = 'white';}
+    )
+}
+
+const clearBtn = document.querySelector('.clearbtn');
+
+clearBtn.addEventListener('click',clearGrid)
