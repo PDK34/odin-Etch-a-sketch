@@ -28,13 +28,7 @@ function createGrid(rowNum, colNum) {
         }
     }
 }
-container.addEventListener('click', (e) => {
-        let square = e.target;
-        if (square !== container) {
-            square.classList.toggle('color');
-       
-}
-});
+
 container.addEventListener('mousedown', (e) => {
     let square = e.target;
     isDrawing = true;
