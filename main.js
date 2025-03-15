@@ -15,7 +15,7 @@ for(let i =0;i<rowNum;i++){
             container.appendChild(div);
 
             div.addEventListener('mouseenter', () => {
-                div.classList.toggle('hovereffect');
+                div.classList.toggle('hovereffect')
             });
 
             div.addEventListener('mouseleave' ,(e) => {
@@ -36,24 +36,11 @@ container.addEventListener('click' ,(e) => {
 })
 
 
-container.addEventListener('mouseenter' ,(e) => {
-    let square = e.target;
-   if (square!==container) {
-     square.classList.add('hovereffect');
-   }
 
-})
-container.addEventListener('mouseleave' ,(e) => {
-    let square = e.target;
-   if (square!==container) {
-     square.classList.remove('hovereffect');
-   }
-
-})
 
 function clearGrid(){
     Array.from(container.children).forEach((child) => {
-        child.style.backgroundColor = 'white';}
+    child.classList.remove('color','hovereffect')}
     )
 }
 
