@@ -22,12 +22,17 @@ body{
 }
 
 .clearbtn{
-    position: absolute;
+    position: fixed;
     left: 5px;
     top: 5px;
     border-radius: 10%;
     cursor: pointer;
+    z-index: 100;
 }
 .clearbtn:hover {
     background-color: #98a19a;
+}
+
+.hovereffect{
+background-color: #000000;
 }

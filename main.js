@@ -15,8 +15,13 @@ for(let i =0;i<rowNum;i++){
             container.appendChild(div);
 
             div.addEventListener('mouseenter', () => {
-                div.style.backgroundColor = 'grey';
+                div.classList.toggle('hovereffect');
             });
+
+            div.addEventListener('mouseleave' ,(e) => {
+               div.classList.toggle('hovereffect');
+            
+            })
         
     }
 }
@@ -34,7 +39,14 @@ container.addEventListener('click' ,(e) => {
 container.addEventListener('mouseenter' ,(e) => {
     let square = e.target;
    if (square!==container) {
-     square.style.backgroundColor = 'grey';
+     square.classList.add('hovereffect');
+   }
+
+})
+container.addEventListener('mouseleave' ,(e) => {
+    let square = e.target;
+   if (square!==container) {
+     square.classList.remove('hovereffect');
    }
 
 })
