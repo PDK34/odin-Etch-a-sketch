@@ -8,8 +8,11 @@ body{
 }
 
 .container{
-    border: solid 2px black;
+    border:  2px solid black;
     width: 960px;
     height: 960px;
     background-color: #f4f4f4;
+
+    display: flex;
+    flex-wrap: wrap;
 }
