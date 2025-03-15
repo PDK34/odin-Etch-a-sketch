@@ -5,16 +5,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; 
 }
 
 .container{
-    width: 960px;
-    height: 960px;
+    width: 99vh; 
+    height: 99vh;
+
     background-color: #f4f4f4;
 
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+    position: absolute;
 }
 
 .color{
@@ -35,4 +37,13 @@ body{
 
 .hovereffect{
 background-color: #000000;
+}
+
+.promptbtn{
+    position: absolute;
+    top:5px;
+    left: 80px;
+    border-radius: 10%;
+    cursor: pointer;
+    z-index: 100;
 }
