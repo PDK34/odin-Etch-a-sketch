@@ -1,4 +1,4 @@
-# odin-Etch-a-sketch web app
+# Etch-a-sketch Web app
 
 A basic etch-a-sketch website with an initial 16x16 grid.
 
