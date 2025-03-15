@@ -1,6 +1,8 @@
 const container = document.querySelector('.container');
 
 let initialSqNum = 16;
+let isDraw = false;
+
 function createGrid(rowNum, colNum) {
     container.innerHTML = '';
     let sqSize = Math.floor(Math.min(container.clientWidth, container.clientHeight) )/ rowNum;
@@ -25,14 +27,33 @@ function createGrid(rowNum, colNum) {
         }
     }
 }
-
 container.addEventListener('click', (e) => {
     let square = e.target;
-    if (square !== container) {
+    if (square !== container&& !isDraw) {
         square.classList.toggle('color');
     }
 });
+container.addEventListener('mousedown', (e) => {
+    let square = e.target;
+    isDraw = true;
+    isClick = true;
+    if (square !== container) {
+        square.classList.add('color');
+    }
+});
+container.addEventListener('mousemove', (e) => {
+    let square = e.target;
+    isClick = false; 
+    if (square !== container&&isDraw) {
+        square.classList.add('color');
+    }
+});
+container.addEventListener('mouseup', (e) => {
+    let square = e.target;
+    isDraw = false;
 
+
+});
 function clearGrid() {
     Array.from(container.children).forEach((child) => {
         child.classList.remove('color', 'hovereffect');
