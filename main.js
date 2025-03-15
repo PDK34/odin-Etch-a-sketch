@@ -11,7 +11,7 @@ for(let i =0;i<rowNum;i++){
             div.style.display='flex';
             div.style.width='16px';
             div.style.height = '16px';
-            div.style.border = '2px solid black';
+            div.style.border = '1px solid black';
             container.appendChild(div);
         
     }
@@ -20,5 +20,8 @@ for(let i =0;i<rowNum;i++){
 
 container.addEventListener('click' ,(e) => {
     let square = e.target;
-    
+   if (square!==container) {
+     square.classList.toggle('color');
+   }
+
 })
