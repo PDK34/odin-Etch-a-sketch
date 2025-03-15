@@ -12,7 +12,7 @@ function createGrid(rowNum, colNum) {
             div.style.display = 'flex';
             div.style.width = `${sqSize}px`;  
             div.style.height = `${sqSize}px`;
-            div.style.border = '1px solid black';
+            div.style.border = '0px solid black';
             container.appendChild(div);
     
             div.addEventListener('mouseenter', () => {

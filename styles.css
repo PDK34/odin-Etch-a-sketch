@@ -17,6 +17,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
+    border: 1px solid black;
 }
 
 .color{
@@ -36,7 +37,7 @@ body{
 }
 
 .hovereffect{
-background-color: #000000;
+background-color: #5a5a5a;
 }
 
 .promptbtn{
